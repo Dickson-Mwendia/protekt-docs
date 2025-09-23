@@ -24,6 +24,7 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Dickson-Mwendia', // Usually your GitHub org/user name.
   projectName: 'protekt-docs', // Usually your repo name.
+  deploymentBranch: 'gh-pages', // The branch that GitHub Pages will serve from
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
