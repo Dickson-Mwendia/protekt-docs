@@ -15,7 +15,7 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: reada
       pages: write
       id-token: write
     steps:
