@@ -71,31 +71,8 @@ const config: Config = {
   ],
 
   plugins: [
-    [
-      '@easyops-cn/docusaurus-search-local',
-      {
-        // Whether to index docs pages
-        indexDocs: true,
-        // Whether to index blog pages
-        indexBlog: true,
-        // Whether to index pages
-        indexPages: false,
-        // Search result limit
-        searchResultLimits: 8,
-        // Search result context length
-        searchResultContextMaxLength: 50,
-        // Whether to split long search result text into multiple lines
-        explicitSearchResultPath: true,
-        // Language settings
-        language: ["en"],
-        // Whether to use smart queries
-        useAllContextsWithNoSearchContext: false,
-        // Whether to ignore files
-        ignoreFiles: [/(?:^|\/)_/],
-        // Remove default stopwords to improve search for technical docs
-        removeDefaultStopWordFilter: true,
-      },
-    ],
+    // Temporarily removed search plugin due to build issues
+    // Will re-add with compatibility fix
   ],
 
   themeConfig: {
@@ -128,10 +105,6 @@ const config: Config = {
               to: '/docs/sdks/javascript',
             },
           ],
-        },
-        {
-          type: 'search',
-          position: 'right',
         },
         {
           href: 'https://github.com/protekt/protekt-docs',
