@@ -26,7 +26,7 @@ Role-Based Access Control (RBAC) restricts access to resources based on user rol
 
 - A Protekt application set up. If you haven't already, see our [Quickstart Guide](../getting-started/quickstart)
 - Basic authentication working in your app
-- An understanding or [how roles in Protekt work](add-link-to-the-roles-conceptual-guidance)
+- An understanding of how roles in Protekt work
 
 ## Step 1: Create Roles in Protekt
 
