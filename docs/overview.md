@@ -18,21 +18,21 @@ customer_intent: "As a developer, I want to understand what Protekt is and how i
 
 # What is Protekt?
 
-Protekt is an authentication platform that helps developers add secure login to their applications. Instead of building authentication from scratch, you can use Protekt's APIs and pre-built components to get login working in minutes.
+Protekt is a cloud authentication platform that helps developers add secure login to their applications. Instead of building authentication from scratch, you can use Protekt's APIs and pre-built components to get login working in minutes.
 
 ## Why Use Protekt?
 
 Building authentication from scratch is complex and risky. Developers often underestimate the security challenges involved in properly managing user identities and access controls. Common pitfalls include weak password policies, inadequate session management, vulnerable password reset flows, and poor multi-factor authentication implementation.
 
-A single security vulnerability can expose user data, damage your reputation, and result in costly compliance violations. Proper identity and access management isn't just about login forms - it's about protecting your users and your business from increasingly sophisticated threats. Here's why you should use Protekt as your identity and access management solution for your applications:
+A single security vulnerability can expose user data, damage your reputation, and result in costly compliance violations. Proper identity and access management isn't just about login forms - it's about protecting your users and your business from increasingly sophisticated threats. Here's why you should use Protekt as the identity and access management solution for your applications:
 
-- **Save Development Time**: Get authentication working in under 30 minutes instead of weeks of custom development.
+- **Save development time**: Get authentication working in under 30 minutes instead of weeks of custom development.
 
-- **Built-in Security**: OAuth 2.0, multi-factor authentication, and enterprise-grade security features included by default.
+- **Built-in security**: OAuth 2.0, multi-factor authentication, and enterprise-grade security features included by default.
 
-- **Easy to Integrate**: Simple APIs, SDKs for popular frameworks, and pre-built UI components.
+- **Easy to integrate**: Simple APIs, SDKs for popular frameworks, and pre-built UI components.
 
-## How Protekt Works
+## How Protekt works
 
 The following diagram illustrates the secure authentication flow that protects your users while keeping integration simple:
 

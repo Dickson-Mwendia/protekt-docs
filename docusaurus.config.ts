@@ -46,7 +46,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/protekt/protekt-docs/tree/main/',
+            'https://github.com/Dickson-Mwendia/protekt-docs',
         },
         blog: {
           showReadingTime: true,
@@ -107,7 +107,7 @@ const config: Config = {
           ],
         },
         {
-          href: 'https://github.com/protekt/protekt-docs',
+          href: 'https://github.com/Dickson-Mwendia/protekt-docs',
           label: 'GitHub',
           position: 'right',
         },
