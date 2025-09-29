@@ -26,18 +26,22 @@ Role-Based Access Control (RBAC) restricts access to resources based on user rol
 
 - A Protekt application set up. If you haven't already, see our [Quickstart Guide](../getting-started/quickstart)
 - Basic authentication working in your app
+- An understanding or [how roles in Protekt work](add-link-to-the-roles-conceptual-guidance)
 
 ## Step 1: Create Roles in Protekt
 
 ### 1.1: Set up roles in your dashboard
 
-1. Go to **Protekt Dashboard** → **Applications** → **Your App**
-2. Navigate to **"Roles & Permissions"**
-3. Create these roles:
+Follow these steps to create a custom role in the Protekt Dashboard to manage your app and user registrations.
 
-- **Admin**: Full system access
-- **Editor**: Can create and edit content  
-- **Viewer**: Read-only access
+1. Sign in to the **Protekt Dashboard**
+1. Browse to **Applications** → **Your App**
+1. Navigate to **"Roles & Permissions"**
+1. Create these roles:
+
+    - **Admin**: Full system access
+    - **Editor**: Can create and edit content  
+    - **Viewer**: Read-only access
 
 ### 1.2: Define permissions
 
@@ -75,7 +79,8 @@ async function assignRole(userId, roleId) {
 await assignRole('user_123', 'rol_editor');
 ```
 
-**How this works:**
+**How it works:**
+
 1. **Management Client**: Creates a client authenticated with your management credentials
 2. **assignRole Function**: Takes a user ID and role ID, then assigns the role to that user
 3. **API Call**: Uses Protekt's Management API to update the user's roles
@@ -109,7 +114,8 @@ function PostEditor({ user, post }) {
 }
 ```
 
-**How this works:**
+**How it works:**
+
 1. **getUserPermissions**: Extracts the permissions array from the user's JWT token (stored in custom claims)
 2. **hasPermission**: Checks if a specific permission exists in the user's permission list
 3. **PostEditor Component**: Uses conditional rendering to show either an error message or the edit form based on permissions
@@ -147,7 +153,8 @@ app.delete('/api/posts/:id', requirePermission('delete:all'), (req, res) => {
 });
 ```
 
-**How this works:**
+**How it works:**
+
 1. **requirePermission Middleware**: Creates a reusable function that checks for specific permissions before route execution
 2. **Permission Check**: Extracts permissions from the authenticated user object and validates the required permission
 3. **403 Response**: Returns a Forbidden status if the user lacks the required permission
@@ -193,12 +200,14 @@ function Navigation({ user }) {
 - Avoid checking permissions on every render
 - Use React Context or state management for permissions
 
-### User Experience
+### User experience
 - Show appropriate error messages for insufficient permissions
 - Hide UI elements users can't access
 - Provide clear feedback about user capabilities
 
 ## Example: Complete Implementation
+
+The following React component demonstrates a complete role-based access control implementation that dynamically shows different routes based on user permissions.
 
 ```javascript
 // React component with RBAC
@@ -236,6 +245,12 @@ function App() {
   );
 }
 ```
+**How it works:**
+
+**Authentication and permission setup**: The `useAuth` hook retrieves the current user and authentication status from Protekt's React SDK. If the user isn't authenticated, they're immediately redirected to the login component. Once authenticated, permissions are extracted from the user's JWT token using a custom claim namespace (`https://your-app.com/permissions`).
+
+**Dynamic routing for enhance security**: Each route is conditionally rendered based on whether the user has the required permission - the `/posts` route only appears if user has `read:posts` permission, `/create-post` route only appears if user has `write:posts` permission, and `/admin` route only appears if user has `delete:all` permission. The navigation component receives the user object to show appropriate menu items, creating a security layer where routes that don't match user permissions are completely hidden from the routing system.
+
 
 ## Next Steps
 
