@@ -188,6 +188,8 @@ function Navigation({ user }) {
 }
 ```
 
+This navigation component extracts the user's permissions and conditionally shows navigation links based on what they're allowed to access. The Dashboard link appears for everyone, while Posts, Create Post, and Admin Panel links only show if the user has the corresponding permissions (`read:posts`, `write:posts`, `delete:all`). This ensures that the app renders the appropriate views to users based on their assigned roles.
+
 ## Best Practices
 
 ### Security
